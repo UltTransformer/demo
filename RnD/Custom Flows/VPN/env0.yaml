@@ -13,9 +13,9 @@ deploy:
             sudo modprobe tun
             echo $OPENVPN_CONFIG_FILE | base64 --decode > ~/config.ovpn
             echo "Connecting"
-            openvpn --config ~/config.ovpn
-            sleep 10
-            nslookup rancher.dev 169.254.169.253  
+            # openvpn --config ~/config.ovpn
+            # sleep 10
+            # nslookup rancher.dev 169.254.169.253  
 
 # echo "Installing OpenVPN"
 # sudo apk update
