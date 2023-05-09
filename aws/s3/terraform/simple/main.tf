@@ -25,4 +25,4 @@ resource "aws_s3_bucket_versioning" "s3_bucket" {
   }
 }
 
-# GLOB testing
+# GLOB testing 1
