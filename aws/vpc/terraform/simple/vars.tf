@@ -18,15 +18,15 @@ variable "subnet_3" {
   type    = string
   default = "10.0.103.0/24"
 }
-variable "subnet_public" {
+variable "subnet_public_1" {
   type    = string
   default = "10.0.201.0/24"
 }
-variable "subnet_public" {
+variable "subnet_public_2" {
   type    = string
   default = "10.0.202.0/24"
 }
-variable "subnet_public" {
+variable "subnet_public_3" {
   type    = string
   default = "10.0.203.0/24"
 }
