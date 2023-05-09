@@ -24,5 +24,3 @@ resource "aws_s3_bucket_versioning" "s3_bucket" {
     status = "Enabled"
   }
 }
-
-# GLOB testing 3
