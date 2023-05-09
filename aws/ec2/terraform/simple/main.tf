@@ -1,3 +1,17 @@
+# Provider
+
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
+}
+
+provider "aws" {
+  region = "eu-north-1"
+}
+
 # Image(s)
 
 data "aws_ami" "amazon_linux" {
