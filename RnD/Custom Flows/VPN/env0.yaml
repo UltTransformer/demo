@@ -6,12 +6,17 @@ deploy:
         - name: VPN installation
           run: |
             echo "Installing OpenVPN"
+            echo "sudo apk update"
             sudo apk update
+            echo "sudo apk add openvpn"
             sudo apk add openvpn 
             # btrfs-progs e2fsprogs e2fsprogs-extra ip6tables iptables openssl shadow-uidmap xfsprogs xz openrc kmod linux-vanilla
+            echo "sudo apk add --update coreutils"
             sudo apk add --update coreutils
+            echo "sudo apk info -vv"
             sudo apk info -vv | grep -e '^linux-vanilla' | awk '{print $1}' | xargs -I{} sh -c 'apk fetch --quiet --stdout {} | tar -xz -C /lib/modules'
-            sudo modprobe tun
+            echo "modprobe tun"
+            modprobe tun
             # echo $OPENVPN_CONFIG_FILE | base64 --decode > ~/config.ovpn
             # echo "Connecting"
             # openvpn --config ~/config.ovpn
