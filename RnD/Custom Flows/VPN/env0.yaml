@@ -15,7 +15,7 @@ deploy:
             echo "sudo apk info -vv"
             sudo apk info -vv | grep -e '^linux-vanilla' | awk '{print $1}' | xargs -I{} sh -c 'apk fetch --quiet --stdout {} | tar -xz -C /lib/modules'
             echo "sudo modprobe tun"
-            sudo modprobe tun
+            sudo -S modprobe tun
             # echo $OPENVPN_CONFIG_FILE | base64 --decode > ~/config.ovpn
             # echo "Connecting"
             # openvpn --config ~/config.ovpn
