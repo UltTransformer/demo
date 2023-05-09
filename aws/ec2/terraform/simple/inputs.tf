@@ -12,7 +12,7 @@ data "terraform_remote_state" "vpc" {
 }
 
 data "aws_vpc" "vpc_1" {
-  id = data.terraform_remote_state.vpc.outputs.id
+  id = data.terraform_remote_state.vpc.outputs.vpc_1
 }
 data "aws_subnet" "subnet_1" {
   id = data.terraform_remote_state.vpc.outputs.subnet_1.id
