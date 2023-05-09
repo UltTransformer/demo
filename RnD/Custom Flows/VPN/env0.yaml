@@ -7,14 +7,14 @@ deploy:
           run: |
             echo "Installing OpenVPN"
             sudo apk update
-            sudo apk add openvpn btrfs-progs e2fsprogs e2fsprogs-extra ip6tables iptables openssl shadow-uidmap xfsprogs xz openrc kmod linux-vanilla
-            sudo apk add --update coreutils
-            sudo apk info -vv | grep -e '^linux-vanilla' | awk '{print $1}' | xargs -I{} sh -c 'apk fetch --quiet --stdout {} | tar -xz -C /lib/modules'
-            sudo modprobe tun
-            echo $OPENVPN_CONFIG_FILE | base64 --decode > ~/config.ovpn
-            echo "Connecting"
-            sudo chmod 777 ~/config.ovpn
-            openvpn --config ~/config.ovpn
+            sudo apk add openvpn 
+            # btrfs-progs e2fsprogs e2fsprogs-extra ip6tables iptables openssl shadow-uidmap xfsprogs xz openrc kmod linux-vanilla
+            # sudo apk add --update coreutils
+            # sudo apk info -vv | grep -e '^linux-vanilla' | awk '{print $1}' | xargs -I{} sh -c 'apk fetch --quiet --stdout {} | tar -xz -C /lib/modules'
+            # sudo modprobe tun
+            # echo $OPENVPN_CONFIG_FILE | base64 --decode > ~/config.ovpn
+            # echo "Connecting"
+            # openvpn --config ~/config.ovpn
             # sleep 10
             # nslookup rancher.dev 169.254.169.253  
 
