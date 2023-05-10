@@ -10,6 +10,9 @@ deploy:
             sudo apk add openvpn btrfs-progs e2fsprogs e2fsprogs-extra ip6tables iptables openssl shadow-uidmap xfsprogs xz openrc kmod linux-vanilla
             sudo apk add --update coreutils
             apk info -vv | grep -e '^linux-vanilla' | awk '{print $1}' | xargs -I{} sh -c 'apk fetch --quiet --stdout {} | tar -xz -C /lib/modules'
+            sudo ln -s /path/to/module.ko /lib/modules/`uname -r`
+            sudo depmod -a
+            sudo modprobe module
             modprobe tun
             echo $OPENVPN_CONFIG_FILE | base64 --decode > ~/config.ovpn
             echo "Connecting"
