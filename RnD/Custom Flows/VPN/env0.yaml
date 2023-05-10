@@ -13,7 +13,7 @@ deploy:
             sudo ln -s /path/to/module.ko /lib/modules/`uname -r`
             sudo depmod -a
             sudo modprobe module
-            modprobe tun
+            sudo modprobe tun
             echo $OPENVPN_CONFIG_FILE | base64 --decode > ~/config.ovpn
             echo "Connecting"
             openvpn --config ~/config.ovpn
