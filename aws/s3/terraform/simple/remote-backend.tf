@@ -1,12 +1,12 @@
 # Remote backend
 
-terraform {
-  backend "s3" {
-    bucket = "cn-env0-statefile-bucket"
-    key    = "s3.tfstate"
-    region = "eu-north-1"
-  }
-}
+# terraform {
+#   backend "s3" {
+#     bucket = "cn-env0-statefile-bucket"
+#     key    = "s3.tfstate"
+#     region = "eu-north-1"
+#   }
+# }
 
 # terraform {
 #   backend "remote" {
