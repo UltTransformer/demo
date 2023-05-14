@@ -1,12 +1,12 @@
 # version: 1
 
-# deploy:
-#   steps:
-#     setupVariables:
-#       after:
-#         - aws configure set default.region eu-west-1
-# destroy:
-#   steps:
-#     setupVariables:
-#       after:
-#         - aws configure set default.region eu-west-1
+deploy:
+  steps:
+    setupVariables:
+      after:
+        - aws configure set default.region eu-west-1
+destroy:
+  steps:
+    setupVariables:
+      after:
+        - aws configure set default.region eu-west-1
