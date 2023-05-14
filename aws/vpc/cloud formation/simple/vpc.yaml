@@ -1,5 +1,3 @@
-export AWS_DEFAULT_REGION="eu-north-1"
-
 Parameters:
   Tag:
     Type: String
