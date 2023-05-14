@@ -1,0 +1,12 @@
+version: 1
+
+deploy:
+  steps:
+    setupVariables:
+      after:
+        - aws cloudformation deploy --region eu-north-1
+destroy:
+  steps:
+    setupVariables:
+      after:
+        - aws cloudformation delete-stack --region eu-north-1
