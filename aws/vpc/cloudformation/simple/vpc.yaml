@@ -19,3 +19,12 @@ Resources:
       Tags:
         - Key: Name
           Value: private-subnet-1
+
+Outputs:
+  VPC:
+    Description: A reference to the created VPC
+    Value: !Ref VPC
+
+    PrivateSubnet1:
+    Description: A reference to the private subnet in the 1st Availability Zone
+    Value: !Ref PrivateSubnet1
