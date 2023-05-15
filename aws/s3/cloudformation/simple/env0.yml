@@ -4,9 +4,9 @@ deploy:
   steps:
     setupVariables:
       after:
-        - aws configure set default.region eu-west-1
+        - aws configure set default.region eu-north-1
 destroy:
   steps:
     setupVariables:
       after:
-        - aws configure set default.region eu-west-1
+        - aws configure set default.region eu-north-1
