@@ -1,5 +1,5 @@
 Resources:
-  WebAppInstance:
+  VM1:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0a79730daaf45078a
@@ -7,7 +7,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Tags:
       - Key: Name
-        Value: tag
+        Value: demo-cf-vpc
 
 Parameters: 
   VPCID: 
