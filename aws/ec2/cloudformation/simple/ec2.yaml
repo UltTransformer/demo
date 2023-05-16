@@ -6,7 +6,7 @@ Resources:
       InstanceType: t3.micro
       Type: AWS::EC2::Subnet
       Tags: 
-        - !Ref VPC
+        - !Ref VPCID
 
 # Parameters: 
 #   VPCID: 
