@@ -11,3 +11,4 @@ Resources:
 Parameters: 
   VPCID: 
     Type: String
+    Value: !Ref VPC
