@@ -10,5 +10,5 @@ Resources:
 
 Parameters: 
   VPCID: 
-    Default: tagtag
+    Default: !Ref VPCID
     Type: String
