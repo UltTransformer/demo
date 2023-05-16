@@ -7,7 +7,7 @@ Resources:
     Type: AWS::EC2::Subnet
     Tags:
       - Key: Name
-        Value: !Ref VPCID
+        Value: 1234567890
 
 Parameters: 
   VPCID: 
