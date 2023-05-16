@@ -12,3 +12,4 @@ Resources:
 Parameters: 
   VPCID: 
     Default: !Ref VPCID
+    Type: String
