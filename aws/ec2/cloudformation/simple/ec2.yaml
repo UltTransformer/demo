@@ -1,7 +1,6 @@
 Resources:
-  MyEC2Instance: 
+  WebAppInstance:
     Type: AWS::EC2::Instance
     Properties:
-      ImageId: "ami-01773ce53581acf22"
-      InstanceType: "t3a.micro"
-        
+      ImageId: ami-0a79730daaf45078a
+      InstanceType: t3.micro
