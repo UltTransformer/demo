@@ -23,7 +23,7 @@ Resources:
 Outputs:
   VPC:
     Description: VPC ID
-    Value: !Ref demo-cf-vpc
+    Value: !Ref VPC
 # Outputs:
 #   StackVPC:
 #     Description: The ID of the VPC
