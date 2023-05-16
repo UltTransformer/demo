@@ -5,3 +5,10 @@ Resources:
       ImageId: ami-0a79730daaf45078a
       InstanceType: t3.micro
     Type: AWS::EC2::Subnet
+    Tags:
+      - Key: Name
+        Value: !Ref VPCID
+
+Parameters: 
+  VPCID: 
+    Default: !Ref VPCID
