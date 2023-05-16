@@ -21,10 +21,7 @@ Resources:
           Value: private-subnet-1
 
 Outputs:
-  VpcId:
-    Description: VPC ID
+  VPC:
+    Description: A reference to the created VPC
     Value: !Ref VPC
-# Outputs:
-#   StackVPC:
-#     Description: The ID of the VPC
-#     Value: !Ref MyVPC
+    
