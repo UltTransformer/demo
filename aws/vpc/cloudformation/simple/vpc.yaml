@@ -19,3 +19,8 @@ Resources:
       Tags:
         - Key: Name
           Value: private-subnet-1
+
+Outputs:
+  VpcID:
+    Description: VPC ID
+    Value: !Ref VPC
