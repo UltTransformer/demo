@@ -20,7 +20,11 @@ Resources:
         - Key: Name
           Value: private-subnet-1
 
-  Outputs:
-    VPC:
-      Description: VPC ID
-      Value: !Ref VPC
+Outputs:
+  VPC:
+    Description: VPC ID
+    Value: !Ref demo-cf-vpc
+# Outputs:
+#   StackVPC:
+#     Description: The ID of the VPC
+#     Value: !Ref MyVPC
