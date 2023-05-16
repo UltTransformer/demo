@@ -8,7 +8,7 @@ Resources:
       Tags: 
         - !Ref VPCID
 
-Parameters: 
-  VPCID: 
-    Default: !Ref VPCID
-    Type: String
+# Parameters: 
+#   VPCID: 
+#     Default: !Ref VPCID
+#     Type: String
