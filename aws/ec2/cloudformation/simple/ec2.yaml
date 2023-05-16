@@ -11,5 +11,5 @@ Resources:
 
 Parameters: 
   VPCID: 
-    Default: !Ref VPCID
+    Default: "1234567890"
     Type: String
