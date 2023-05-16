@@ -21,6 +21,6 @@ Resources:
           Value: private-subnet-1
 
   Outputs:
-    VpcID:
+    VPC:
       Description: VPC ID
       Value: !Ref VPC
