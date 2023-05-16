@@ -23,5 +23,4 @@ Resources:
 Outputs:
   VPC:
     Description: A reference to the created VPC
-    Value: !Ref VPC
-    
+    Value: !Ref CidrBlock
