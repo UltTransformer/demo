@@ -7,9 +7,9 @@ Resources:
     Type: AWS::EC2::Subnet
     Tags:
       - Key: Name
-        Value: 1234567890
+        Value: tag
 
 Parameters: 
   VPCID: 
-    Default: "1234567890"
+    Default: "tag"
     Type: String
