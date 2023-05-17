@@ -8,7 +8,7 @@ deploy:
    terraformOutput:
       after:
         - name: Echo VPC ID
-          run: echo {"$ENV0_VAR_vpcid"}
+          run: echo $ENV0_VAR_vpcid
 
 # Add a env variable to pull output KEY=[var name]& Value='${env0:<env0_environment_id>:<output_key>}'
 # Reference the new variable with the following string `$[var name]`
