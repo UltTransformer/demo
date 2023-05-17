@@ -31,7 +31,7 @@ data "aws_ami" "amazon_linux" {
 
 resource "aws_security_group" "security_group" {
   name   = var.security-group-name
-  vpc_id = data.aws_vpc.vpc_1.id
+  vpc_id = var.vpc_id
 
   ingress {
     from_port   = 0
