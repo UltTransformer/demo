@@ -5,5 +5,8 @@ deploy:
      after:  
        - name: Import Variables
          use: https://github.com/env0/env0-import-variable-plugin
+       - name: Print VPC ID
+         run: echo $VPC
 
-# Add a env variable to pull output '${env0:<env0_environment_id>:<output_key>}'
+# Add a env variable to pull output KEY=[var name]& Value='${env0:<env0_environment_id>:<output_key>}'
+# Reference the new variable with the following string `$[var name]`
