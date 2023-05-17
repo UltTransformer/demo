@@ -1,4 +1,4 @@
-# version: 1
+# version: 2
 
 version: 2  
 deploy:  
@@ -8,8 +8,10 @@ deploy:
         - name: Set Region
           run: aws configure set default.region eu-north-1
 
-destroy:
-  steps:
-    setupVariables:
-      after:
-        - aws configure set default.region eu-north-1
+version: 2  
+destroy:  
+  steps:  
+    setupVariables:  
+      after:  
+        - name: Set Region
+          run: aws configure set default.region eu-north-1
