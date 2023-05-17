@@ -70,7 +70,7 @@ resource "aws_instance" "ec2_1" {
   }
   tags = {
     Name = var.ec2-instance-name
-    envID = var.ENV0_ENVIRONMENT_ID
+    # envID = var.ENV0_ENVIRONMENT_ID
   }
 }
 
