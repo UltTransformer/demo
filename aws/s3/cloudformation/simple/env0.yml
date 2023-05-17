@@ -7,8 +7,6 @@ deploy:
       after:  
         - name: Set Region
           run: aws configure set default.region eu-north-1
-        - name: Set Stackname
-          run: aws cloudformation create-stack-set --stack-set-name demo-s3
 
 destroy:  
   steps:  
@@ -16,5 +14,3 @@ destroy:
       after:  
         - name: Set Region
           run: aws configure set default.region eu-north-1
-        - name: Set Stackname
-          run: aws cloudformation create-stack-set --stack-set-name demo-s3
