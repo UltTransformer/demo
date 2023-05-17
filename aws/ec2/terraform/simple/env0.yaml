@@ -9,7 +9,7 @@ deploy:
       after:
         - name: Echo VPC ID
           run: |
-            echo $ENV0_VAR_vpcid
+            echo $TF_VAR_vpcid
             echo $ENV0_ENVIRONMENT_ID
 
 # Add a env variable to pull output KEY=[var name] & Value='${env0:<env0_environment_id>:<output_key>}'
