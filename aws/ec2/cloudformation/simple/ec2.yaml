@@ -1,5 +1,5 @@
 Resources:
-  VM1:
+  EC2:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0a79730daaf45078a
