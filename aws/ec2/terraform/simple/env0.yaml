@@ -9,7 +9,6 @@ deploy:
       after:
         - name: Echo VPC ID
           run: |
-            echo KEY=VALUE >> $ENV0_ENV
             echo $TF_VAR_vpcid
             echo $ENV0_ENVIRONMENT_ID
 
