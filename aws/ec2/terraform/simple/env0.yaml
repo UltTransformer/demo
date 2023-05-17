@@ -5,11 +5,12 @@ deploy:
      after:  
        - name: Import Variables
          use: https://github.com/env0/env0-import-variable-plugin
+         inputs: {}
    terraformOutput:
       after:
         - name: Echo VPC ID
-          run: echo TF_VAR_vpc_id=$ENV0_VAR_vpcid >> $ENV0_TEMP
-               echo $ENV0_TEMP
+          run: |
+            echo $ENV0_VAR_vpcid
 
-# Add a env variable to pull output KEY=[var name]& Value='${env0:<env0_environment_id>:<output_key>}'
+# Add a env variable to pull output KEY=[var name] & Value='${env0:<env0_environment_id>:<output_key>}'
 # Reference the new variable with the following string `$[var name]`
