@@ -29,3 +29,7 @@ variable "egress_sg_cidr" {
   type    = string
   default = "10.10.0.0/16"
 }
+
+variable "vpc_id" {
+  type    = string
+}
