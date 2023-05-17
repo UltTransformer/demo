@@ -7,8 +7,6 @@ deploy:
       after:  
         - name: Set Region
           run: aws configure set default.region eu-north-1
-        - name: Import Variables
-          use: https://github.com/env0/env0-import-variable-plugin@0.2.0
 
 destroy:
   steps:
