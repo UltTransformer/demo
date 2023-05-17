@@ -6,7 +6,7 @@ deploy:
     setupVariables:  
       after:  
         - name: Set Region
-          run: aws configure set default.region eu-north-1 --stack-name demo-vpc
+          run: aws configure set default.region eu-north-1 stack-name demo-vpc
 
 destroy:  
   steps:  
