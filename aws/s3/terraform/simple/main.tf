@@ -6,6 +6,12 @@ terraform {
       source = "hashicorp/aws"
     }
   }
+  backend "remote" {  
+  organization = "ChrisNoonPlayground"
+    workspaces {
+      name = "ws-wTk3dBckeZY1Bb8R"
+    }
+  }
 }
 
 provider "aws" {
@@ -22,14 +28,5 @@ resource "aws_s3_bucket_versioning" "s3_bucket" {
   bucket = aws_s3_bucket.s3_bucket.id
   versioning_configuration {
     status = "Enabled"
-  }
-}
-
-# Temp for testing
-
-backend "remote" {  
-  organization = "ChrisNoonPlayground"
-  workspaces {
-    name = "ws-wTk3dBckeZY1Bb8R"
   }
 }
