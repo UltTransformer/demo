@@ -6,12 +6,12 @@ variable "region" {
 }
 
 variable "ec2-instance-name" {
-  type = string
+  type    = string
   default = "CHANGE ME"
 }
 
 variable "security-group-name" {
-  type = string
+  type    = string
   default = "CHANGE ME"
 }
 
