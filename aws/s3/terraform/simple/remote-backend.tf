@@ -5,7 +5,7 @@ terraform {
     bucket = "cn-env0-statefile-bucket"
     key    = "aws/s3/terraform/simple/s3.tfstate"
     region = "eu-north-1"
-    workspace_key_prefix = "vmware"
+    workspace_key_prefix = "vcos"
   }
 }
 
