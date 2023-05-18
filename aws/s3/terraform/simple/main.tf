@@ -6,12 +6,14 @@ terraform {
       source = "hashicorp/aws"
     }
   }
+// Remove block
   backend "remote" {  
   organization = "ChrisNoonPlayground"
     workspaces {
       name = "ws-wTk3dBckeZY1Bb8R"
     }
   }
+// Remove block
 }
 
 provider "aws" {
