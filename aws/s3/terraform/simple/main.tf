@@ -10,7 +10,7 @@ terraform {
   backend "remote" {  
   organization = "ChrisNoonPlayground"
     workspaces {
-      name = "ws-wTk3dBckeZY1Bb8R"
+      name = "demo"
     }
   }
 // Remove block
