@@ -25,3 +25,11 @@ resource "aws_s3_bucket_versioning" "s3_bucket" {
   }
 }
 
+# Temp for testing
+
+backend "remote" {  
+  organization = "ChrisNoonPlayground"
+  workspaces {
+    name = "ws-wTk3dBckeZY1Bb8R"
+  }
+}
