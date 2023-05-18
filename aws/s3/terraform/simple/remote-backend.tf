@@ -3,7 +3,7 @@
 terraform {
   backend "s3" {
     bucket = "cn-env0-statefile-bucket"
-    key    = "s3.tfstate"
+    key    = "aws/s3/terraform/simple/s3.tfstate"
     region = "eu-north-1"
   }
 }
