@@ -5,10 +5,10 @@ module "aws-ec2-module-simple" {
 
 variable "security-group-name" {
   type = string
-  default = vm1
+  default = "vm1"
 }
 
 variable "ec2-instance-name" {
   type = string
-  default = vm1-sg
+  default = "vm1-sg"
 }
