@@ -1,0 +1,9 @@
+environments:
+  vpc:
+    name: 'VPC'
+    templateName: 'aws/vpc/terraform/simple'
+  ec2:
+    name: EC2
+    templateName: 'aws/ec2/terraform/simple'
+    needs:
+      - vpc
