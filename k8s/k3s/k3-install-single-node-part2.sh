@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# Recommended to run from sudo
+
 # Correct kubeconfig path
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
