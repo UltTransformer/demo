@@ -16,13 +16,16 @@ helm repo add cilium https://helm.cilium.io/
 # Install K3s without a CNI
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--flannel-backend=none --disable-network-policy' sh -
 
+# Reboot system
+reboot
+
 # Correct kubeconfig path
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 kubectl get pods --all-namespaces
 helm ls --all-namespaces
 
 # Install Cilium
-helm install cilium cilium/cilium --version 1.13.3 --namespace cilium
+helm install cilium cilium/cilium --version 1.13.3 --set operator.replicas=1
 
 # Restart all existing pods
 kubectl get pods --all-namespaces -o custom-columns=NAMESPACE:.metadata.namespace,NAME:.metadata.name,HOSTNETWORK:.spec.hostNetwork --no-headers=true | grep '<none>' | awk '{print "-n "$1" "$2}' | xargs -L 1 -r kubectl delete pod
