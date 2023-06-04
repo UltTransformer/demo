@@ -2,6 +2,9 @@
 
 # Recommended to run from sudo
 
+# Change to home directory
+cd ~
+
 # Correct kubeconfig path
 # https://docs.k3s.io/cluster-access
 # Note - Required on reboot
