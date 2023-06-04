@@ -19,6 +19,7 @@ helm repo add cilium https://helm.cilium.io/
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC='--flannel-backend=none --disable-network-policy' sh -
 
 # Correct kubeconfig path
+# https://docs.k3s.io/cluster-access
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 # Install Cilium
