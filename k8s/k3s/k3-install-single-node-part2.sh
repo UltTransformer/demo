@@ -3,6 +3,7 @@
 # Recommended to run from sudo
 
 # Correct kubeconfig path
+# Note - Required on reboot
 export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
 
 # Restart all existing pods
