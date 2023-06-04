@@ -20,7 +20,7 @@ sudo tar xzvfC cilium-linux-${CLI_ARCH}.tar.gz /usr/local/bin
 rm cilium-linux-${CLI_ARCH}.tar.gz{,.sha256sum}
 
 # Check Cilium status 
-cilium status --namespace=default
+cilium status --wait --namespace=default
 
 # Run Cilium connectivity test
 cilium connectivity test --namespace=default
