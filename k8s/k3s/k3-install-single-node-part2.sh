@@ -2,6 +2,9 @@
 
 # Recommended to run from sudo
 
+# Correct kubeconfig path
+export KUBECONFIG=/etc/rancher/k3s/k3s.yaml
+
 # Restart all existing pods
 kubectl get pods --all-namespaces -o custom-columns=NAMESPACE:.metadata.namespace,NAME:.metadata.name,HOSTNETWORK:.spec.hostNetwork --no-headers=true | grep '<none>' | awk '{print "-n "$1" "$2}' | xargs -L 1 -r kubectl delete pod
 
