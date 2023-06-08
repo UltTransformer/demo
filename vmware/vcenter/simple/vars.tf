@@ -12,3 +12,8 @@ variable "vsphere_server" {
   type    = string
   default = "server-ip"
 }
+
+variable "data-center" {
+  type    = string
+  default = "data-center"
+}
