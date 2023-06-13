@@ -1,10 +1,12 @@
 # Remote backend
 
-backend "remote" {  
-  organization = "ChrisNoonPlayground"
-  workspaces {
-    name = "demo"
+terraform {
+  backend "remote" {
+    organization = "ChrisNoonPlayground"
+    workspaces {
+      name = "demo"
     }
+  }
 }
 
 # terraform {

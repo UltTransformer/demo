@@ -105,7 +105,7 @@ resource "aws_route" "main" {
 
 # Security group for public subnet
 resource "aws_security_group" "public_sg" {
-  name   =  "${var.project}-Public-sg"
+  name   = "${var.project}-Public-sg"
   vpc_id = aws_vpc.eks_vpc.id
 
   tags = {
@@ -143,7 +143,7 @@ resource "aws_security_group_rule" "sg_egress_public" {
 
 # Security group for data plane
 resource "aws_security_group" "data_plane_sg" {
-  name   =  "${var.project}-Worker-sg"
+  name   = "${var.project}-Worker-sg"
   vpc_id = aws_vpc.eks_vpc.id
 
   tags = {

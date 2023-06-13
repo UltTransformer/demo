@@ -28,11 +28,11 @@ data "vsphere_datastore" "iso_datastore" {
 }
 
 resource "vsphere_virtual_machine" "vm" {
-  name          = "VM123456789"
+  name             = "VM123456789"
   resource_pool_id = data.vsphere_compute_cluster.cluster.resource_pool_id
-  datastore_id = data.vsphere_datastore.datastore.id
-  num_cpus = 12
-  memory   = 36
+  datastore_id     = data.vsphere_datastore.datastore.id
+  num_cpus         = 12
+  memory           = 36
 
   network_interface {
     network_id = data.vsphere_network.network.id
@@ -42,8 +42,8 @@ resource "vsphere_virtual_machine" "vm" {
     template_uuid = data.vsphere_virtual_machine.template.id
   }
   disk {
-    label = "disk0"
-    size  = 700
+    label            = "disk0"
+    size             = 700
     thin_provisioned = "false"
   }
 

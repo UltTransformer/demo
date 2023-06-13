@@ -26,11 +26,11 @@ variable "egress_sg_cidr" {
 }
 
 variable "security-group-name" {
-  type = string
+  type    = string
   default = "vm1-sg"
 }
 
 variable "ec2-instance-name" {
-  type = string
+  type    = string
   default = "vm1"
 }
