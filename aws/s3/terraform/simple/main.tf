@@ -1,5 +1,3 @@
-# Date: 6/14
-
 # Provider
 
 terraform {
