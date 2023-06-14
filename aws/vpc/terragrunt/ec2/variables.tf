@@ -7,7 +7,7 @@ variable "ec2_instance_size" {
 
 variable "ec2_name" {
   type    = string
-  default = "change-me"
+  default = "vm1"
 }
 
 variable "region" {
@@ -27,8 +27,10 @@ variable "egress_sg_cidr" {
 
 variable "security-group-name" {
   type = string
+  default = "vm1"
 }
 
 variable "ec2-instance-name" {
   type = string
+  default = "vm1"
 }
