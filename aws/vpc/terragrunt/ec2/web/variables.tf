@@ -7,12 +7,12 @@ variable "region" {
 
 variable "ec2-instance-name" {
   type    = string
-  default = "vm1"
+  default = "web"
 }
 
 variable "security-group-name" {
   type    = string
-  default = "vm1"
+  default = "web"
 }
 
 variable "ec2_instance_size" {
