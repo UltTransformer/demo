@@ -1,6 +1,8 @@
-# Variables file
+# Variables
 
-variable "vpc_1_cidr" {
+# Vatiable definitions 
+
+variable "vpc_1_cidr_1" {
   type    = string
   default = "10.0.0.0/16"
 }

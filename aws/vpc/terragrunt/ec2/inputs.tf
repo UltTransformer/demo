@@ -1,6 +1,12 @@
 # Variable Imports
 
 data "aws_vpc" "vpc_1" {
+  tags = {
+    Name   = "app-server"
+  }
+}
+
+data "aws_vpc" "vpc_1" {
   id = data.terraform_remote_state.vpc.outputs.vpc_1
 }
 data "aws_subnet" "subnet_1" {
