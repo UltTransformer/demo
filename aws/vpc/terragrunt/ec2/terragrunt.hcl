@@ -13,7 +13,3 @@ dependency "vpc" {
   }
   mock_outputs_allowed_terraform_commands = ["validate"]
 }
-
-inputs = {
-  vpc_id = dependency.vpc.outputs.vpc_id
-}
