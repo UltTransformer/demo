@@ -12,6 +12,6 @@ dependency "vpc" {
     vpc_id = "temporary-dummy-id"
     subnet_1 = "temporary-dummy-id"
   }
-  mock_outputs_allowed_terraform_commands = ["validate"]
+  mock_outputs_allowed_terraform_commands = ["validate","plan"]
   skip_outputs = true
 }
