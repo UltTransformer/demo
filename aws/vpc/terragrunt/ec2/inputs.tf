@@ -2,15 +2,17 @@
 
 data "aws_vpc" "vpc_1" {
   tags = {
-    Name   = "app-server"
+    Name   = "vpc_1"
+  }
+}
+data "aws_subnet" "subnet_1" {
+  tags = {
+    Name   = "subnet_1"
   }
 }
 
 data "aws_vpc" "vpc_1" {
   id = data.terraform_remote_state.vpc.outputs.vpc_1
-}
-data "aws_subnet" "subnet_1" {
-  id = data.terraform_remote_state.vpc.outputs.subnet_1
 }
 data "aws_subnet" "subnet_2" {
   id = data.terraform_remote_state.vpc.outputs.subnet_2
