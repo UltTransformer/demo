@@ -7,6 +7,12 @@ terraform {
       source = "hashicorp/aws"
     }
   }
+  backend "remote" {  
+  organization = "ChrisNoonPlayground"
+  workspaces {
+    name = "demo"
+    }
+}
 }
 
 provider "aws" {
