@@ -3,4 +3,4 @@ Resources:
     Type: AWS::S3::Bucket
     Description: Creating Amazon S3 bucket from CloudFormation
     Properties:
-      BucketName: ${BUCKET-NAME}
+      BucketName: 3rbvc082hc023bx023bxc3eob2xeonex
