@@ -6,11 +6,13 @@ deploy:
     setupVariables:  
       after:  
         - name: Set Region
-          run: aws configure set default.region eu-north-1
+          run: echo eu-north-1
+          #run: aws configure set default.region eu-north-1
 
 destroy:  
   steps:  
     setupVariables:  
       after:  
         - name: Set Region
-          run: aws configure set default.region eu-north-1
+          run: echo eu-north-1
+          # run: aws configure set default.region eu-north-1
