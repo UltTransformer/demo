@@ -3,9 +3,9 @@
 terraform {
   backend "s3" {
     bucket = "cn-env0-statefile-bucket"
-    key    = "vco9025-usor1.tfstate"
     region = "eu-north-1"
-    workspace_key_prefix = "vcos"
+    #key    = "vco9025-usor1.tfstate"
+    #workspace_key_prefix = "vcos"
   }
 }
 
