@@ -8,10 +8,8 @@ resource "env0_project" "build-stage" {
   description = "build-Stage"
 }
 
-resource "env0_project" "S3" {
-  name        = "S3"
-  description = "S3"
-  parent_project_id = env0_project.build-production.id
-
-
-}
+# resource "env0_project" "S3" {
+#   name        = "S3"
+#   description = "S3"
+#   parent_project_id = env0_project.build-production.id
+# }
