@@ -10,10 +10,6 @@ resource "env0_project" "build-stage" {
   description = "build-Stage"
 }
 
-output "build-Production ID" {
-  value = env0_project.build-Production.parent_project_id
-}
-
 # Sub Projects
 
 resource "env0_project" "S3" {
