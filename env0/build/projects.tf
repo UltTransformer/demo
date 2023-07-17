@@ -11,7 +11,7 @@ resource "env0_project" "build-stage" {
 resource "env0_project" "S3" {
   name        = "S3"
   description = "S3"
-  parent_project_id = env0_project.build-Production.parent_project_id
+  parent_project_id = "8bcbf954-c080-453f-85a0-4502c3f0676e"
 }
 
 resource "env0_project" "VPC" {
