@@ -1,3 +1,5 @@
+# Root projects
+
 resource "env0_project" "build-production" {
   name        = "build-Production"
   description = "build-Production"
@@ -7,6 +9,12 @@ resource "env0_project" "build-stage" {
   name        = "build-Stage"
   description = "build-Stage"
 }
+
+output "build-Production ID" {
+  value = env0_project.build-Production.ID
+}
+
+# Sub Projects
 
 resource "env0_project" "S3" {
   name        = "S3"
