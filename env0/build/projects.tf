@@ -1,7 +1,9 @@
-terraform {
-  required_providers {
-    env0 = {
-      source = "env0/env0"
-    }
-  }
+resource "env0_project" "build-production" {
+  name        = "build-production"
+  description = "build-production"
+}
+
+resource "env0_project" "build-stage" {
+  name        = "build-stage"
+  description = "build-stage"
 }
