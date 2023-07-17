@@ -11,7 +11,7 @@ resource "env0_project" "build-stage" {
 }
 
 output "build-Production ID" {
-  value = env0_project.build-Production.ID
+  value = env0_project.build-Production.parent_project_id
 }
 
 # Sub Projects
