@@ -11,5 +11,5 @@ resource "env0_project" "build-stage" {
 resource "env0_project" "S3" {
   name        = "S3"
   description = "S3"
-  parent_project_id = data.env0_project.build-production.parent_project_id
+  parent_project_id = value.env0_project.build-production.parent_project_id
 }
