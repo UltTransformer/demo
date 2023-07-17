@@ -1,3 +1,8 @@
+provider "aws" {
+  region     = "eu-west-1"
+}
+
+
 data "env0_configuration_variable" "firewalls" {
   name       = "firewalls"
   project_id = data.env0_project.tenant_env0_project.id
