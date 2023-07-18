@@ -35,21 +35,3 @@ resource "env0_project" "S3" {
   description = "S3"
   parent_project_id = "a1fa2857-48f1-496a-8639-a2dcc36688ae"
 }
-
-resource "env0_project" "VPC" {
-  name        = "VPC"
-  description = "VPC"
-  parent_project_id = "a1fa2857-48f1-496a-8639-a2dcc36688ae"
-}
-
-resource "env0_project" "EC2" {
-  name        = "EC2"
-  description = "EC2"
-  parent_project_id = "a1fa2857-48f1-496a-8639-a2dcc36688ae"
-}
-
-resource "env0_project" "RnD" {
-  name        = "RnD"
-  description = "RnD"
-  parent_project_id = "a1fa2857-48f1-496a-8639-a2dcc36688ae"
-}
