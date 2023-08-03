@@ -81,5 +81,5 @@ data "aws_secretsmanager_secret" "region" {
 }
 
 data "aws_secretsmanager_secret_version" "current" {
-  region_id = data.aws_secretsmanager_secret.region.id
+  secret_id = data.aws_secretsmanager_secret.region.id
 }
