@@ -1,3 +1,5 @@
+#  Notes: Customer change 8/4 07:39
+
 # Root projects
 
 resource "env0_project" "build-production" {
