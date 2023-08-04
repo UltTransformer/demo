@@ -77,7 +77,7 @@ resource "aws_instance" "ec2_1" {
 # Pull secrets
 
 data "aws_secretsmanager_secret" "region" {
-  arn = "arn:aws:secretsmanager:us-east-1:123456789012:secret:my_secrety_name-123456"
+  arn = "arn:aws:secretsmanager:eu-north-1:176620772543:secret:REGION-84iSZ0"
 }
 
 data "aws_secretsmanager_secret_version" "current" {
