@@ -6,6 +6,7 @@ deploy:
         - name: Set OIDC Token For GCP
           run: |
             echo Pushing OICD toekn into text file
+            run: echo $ENV0_OIDC_TOKEN > env0-oidc-token.txt
 destroy:
   steps:
     setupVariables:
@@ -13,5 +14,6 @@ destroy:
         - name: Set OIDC Token For GCP
           run: |
             echo Pushing OICD toekn into text file
+            run: echo $ENV0_OIDC_TOKEN > env0-oidc-token.txt
             
             
