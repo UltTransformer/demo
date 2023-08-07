@@ -7,13 +7,3 @@ resource "google_storage_bucket" "gcp-demo-bucket" {
  storage_class = "STANDARD"
  uniform_bucket_level_access = true
 }
-
-# Upload a text file as an object
-# to the storage bucket
-
-resource "google_storage_bucket_object" "default" {
- name         = "cn-gcp-demo-bucket-2uec2bec"
- source       = "cn-gcp-demo-bucket-2uec2bec"
- content_type = "text/plain"
- bucket       = google_storage_bucket.gcp-demo-bucket.id
-}
