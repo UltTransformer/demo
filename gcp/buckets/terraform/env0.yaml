@@ -10,4 +10,6 @@ destroy:
     setupVariables:
       after:
         - name: Set OIDC Token For GCP
-          run: echo $ENV0_OIDC_TOKEN > env0-oidc-token.txt
+          run: |
+            echo Pushing OICD toekn into text file
+            
