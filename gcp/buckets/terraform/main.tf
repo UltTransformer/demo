@@ -15,5 +15,5 @@ resource "google_storage_bucket_object" "default" {
  name         = "gcp-demo-bucket"
  source       = "gcp-demo-bucket"
  content_type = "text/plain"
- bucket       = google_storage_bucket.static.id
+ bucket       = google_storage_bucket.gcp-demo-bucket.id
 }
