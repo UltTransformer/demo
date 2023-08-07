@@ -4,6 +4,10 @@ variable "region" {
   type    = string
 }
 
+variable "sub-region" {
+  type    = string
+}
+
 variable "ec2-instance-name" {
   type    = string
   default = "CHANGE ME"

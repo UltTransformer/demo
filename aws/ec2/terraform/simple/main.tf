@@ -63,7 +63,7 @@ resource "aws_network_interface" "ec2_1" {
 resource "aws_instance" "ec2_1" {
   ami               = data.aws_ami.amazon_linux.id
   instance_type     = var.ec2_instance_size
-  availability_zone = var.region
+  availability_zone = var.sub-region
 
   network_interface {
     network_interface_id = aws_network_interface.ec2_1.id
