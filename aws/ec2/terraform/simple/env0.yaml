@@ -11,3 +11,8 @@ deploy:
             path: ${ENV0_ROOT_DIR}/env0/opa/rego
             flags: --input tf-plan.json --fail-defined --format=raw
             query: data.terraform.validation.violations[msg]
+    terraformOutput:
+      after:
+        - name: Ansible or SaltStack
+          run: |
+            echo Automation is fun!
