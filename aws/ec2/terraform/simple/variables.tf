@@ -2,7 +2,10 @@
 
 variable "region" {
   type    = string
-  default = "eu-north-1a"
+}
+
+variable "sub-region" {
+  type    = string
 }
 
 variable "ec2-instance-name" {
