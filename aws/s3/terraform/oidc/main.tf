@@ -20,7 +20,7 @@ terraform {
 provider "aws" {
   region = "eu-north-1"
   assume_role_with_web_identity {
-    role_arn                = "{arn:aws:iam::176620772543:role/env0_oidc_role}"
+    role_arn                = "arn:aws:iam::176620772543:role/env0_oidc_role"
     session_name            = "env0_OIDC_session"
     web_identity_token_file = "env0-oidc-token.txt"
   }
