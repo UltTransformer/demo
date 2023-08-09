@@ -1,11 +1,11 @@
 # Variables file
 
 variable "region" {
-  type    = string
+  type = string
 }
 
 variable "sub-region" {
-  type    = string
+  type = string
 }
 
 variable "ec2-instance-name" {
