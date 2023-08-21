@@ -1,0 +1,14 @@
+environments:
+  s3-main:
+    name: 's3-main'
+    templateName: 'aws/s3/terraform/simple'
+  s3-1a:
+    name: s3-1a
+    templateName: 'aws/s3/terraform/simple'
+    needs:
+      - s3-main
+  s3-1b:
+    name: s3-1b
+    templateName: 'aws/s3/terraform/simple'
+    needs:
+      - s3-main
