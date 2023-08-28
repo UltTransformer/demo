@@ -1,9 +1,9 @@
 version: 2
 deploy:
   steps:
-    terraformPlan:
-      after:
+    terraformInit:
+      before:
         - name: Create state string
           run: |
-            var.env_id=$ENV0_ENVIRONMENT_ID
-            echo $var.env_id
+            env_id="$ENV0_ENVIRONMENT_ID"
+            echo $env_id
