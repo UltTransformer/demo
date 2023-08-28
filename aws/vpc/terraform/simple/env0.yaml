@@ -9,5 +9,6 @@ deploy:
             state_string="$ENV0_ENVIRONMENT_ID.${env_region}"
             export TF_VAR_state_string=$state_string
             echo "$TF_VAR_state_string"
-            echo "state_string= | $state_string" >> my.auto.tfvars
+            echo "state_string=$state_string" >> my.auto.tfvars
+            echo >> my.auto.tfvars
 
