@@ -10,6 +10,4 @@ deploy:
             export TF_VAR_state_string=$state_string
             echo "$TF_VAR_state_string"
             echo "state_string=\"7527211e-9ed5-48ae-93d4-e49e3cc2ecc6.eu-north-1\"" >> my.auto.tfvars
-
-
-
+            
