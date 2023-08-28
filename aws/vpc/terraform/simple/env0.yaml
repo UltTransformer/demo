@@ -5,11 +5,11 @@ deploy:
       before:
         - name: Create String
           run: |
-            echo "$ENV0_ENVIRONMENT_ID"
             env_region=$( cat env0.auto.tfvars.json | jq -r '.region' )
+            echo "$ENV0_ENVIRONMENT_ID"
             echo ${env_region}
+            echo "-----"
             state_string="$ENV0_ENVIRONMENT_ID.${env_region}"
-            echo $state_string
             export TF_VAR_state_string=$state_string
             echo "$TF_VAR_state_string"
 
