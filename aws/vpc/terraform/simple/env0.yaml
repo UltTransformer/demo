@@ -3,4 +3,5 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - echo $ENV0_ENVIRONMENT_ID
+        - name: Print ENV0_ENVIRONMENT_ID 
+          run: echo $ENV0_ENVIRONMENT_ID
