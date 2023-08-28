@@ -10,7 +10,7 @@ deploy:
             export TF_VAR_state_string=$state_string
             echo "$TF_VAR_state_string"
             echo "state_string=$state_string" >> my.auto.tfvars
-            echo "\n"
+            echo "\n" >> my.auto.tfvars
 
 
 
