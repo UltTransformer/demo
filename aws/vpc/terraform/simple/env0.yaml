@@ -3,5 +3,7 @@ deploy:
   steps:
     terraformPlan:
       after:
-        - name: Print ENV0_ENVIRONMENT_ID 
-          run: echo $ENV0_ENVIRONMENT_ID
+        - name: Create state string
+          run: |
+            var.env_id=$ENV0_ENVIRONMENT_ID
+            echo $var.env_id
