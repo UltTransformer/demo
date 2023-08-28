@@ -1,0 +1,6 @@
+version: 2
+deploy:
+  steps:
+    terraformPlan:
+      after:
+        - echo $ENV0_ENVIRONMENT_ID
