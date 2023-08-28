@@ -5,4 +5,5 @@ deploy:
       before:
         - name: Create String
           run: |
-            echo "$ENV0_ENVIRONMENT_ID.$region"
+            echo "$ENV0_ENVIRONMENT_ID"
+            echo "$region"
