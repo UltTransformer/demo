@@ -10,4 +10,6 @@ deploy:
             echo ${env_region}
             state_string="$ENV0_ENVIRONMENT_ID.${env_region}"
             echo $state_string
+            export TF_VAR_state_string=$state_string
+            echo "$TF_VAR_state_string"
 
