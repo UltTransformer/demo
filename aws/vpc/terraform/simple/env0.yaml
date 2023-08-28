@@ -6,4 +6,6 @@ deploy:
         - name: Create String
           run: |
             echo "$ENV0_ENVIRONMENT_ID"
-            cat env0.auto.tfvars.json | jq '.region'
+            env_region=env0.auto.tfvars.json | jq '.region'
+            echo $env_region
+
