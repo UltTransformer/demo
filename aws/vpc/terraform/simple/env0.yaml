@@ -3,6 +3,6 @@ deploy:
   steps:
     terraformInit:
       before:
-        - name: Create state string
+        - name: Create String
           run: |
-            echo "$ENV0_ENVIRONMENT_ID"
+            echo "$ENV0_ENVIRONMENT_ID"+"."+"$region"
