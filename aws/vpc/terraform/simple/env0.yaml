@@ -7,5 +7,5 @@ deploy:
           run: |
             echo "$ENV0_ENVIRONMENT_ID"
             env_region=$( env0.auto.tfvars.json | jq '.region' )
-            echo ${env_region}
+            print ${env_region}
 
