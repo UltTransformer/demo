@@ -6,4 +6,4 @@ deploy:
         - name: Create String
           run: |
             echo "$ENV0_ENVIRONMENT_ID"
-            echo "$ENV0_TF_VERSION"
+            echo "$ENV0_WORKSPACE_NAME"
