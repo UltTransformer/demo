@@ -48,5 +48,4 @@ variable "sub_region_3" {
 }
 variable "state_string" {
   type    = string
-  default = "$TF_VAR_state_string"
 }
