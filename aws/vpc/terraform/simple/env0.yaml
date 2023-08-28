@@ -5,5 +5,4 @@ deploy:
       before:
         - name: Create state string
           run: |
-            env_id="$ENV0_ENVIRONMENT_ID"
-            echo $env_id
+            echo $ENV0_ENVIRONMENT_ID
