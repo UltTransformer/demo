@@ -11,4 +11,5 @@ environments:
     name: EC2-2
     templateName: 'aws/ec2/cloudformation/simple'
     needs:
-      - vpc
+    # settings:
+	   #  environmentRemovalStrategy: detatch
