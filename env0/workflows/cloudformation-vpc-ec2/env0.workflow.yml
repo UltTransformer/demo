@@ -13,4 +13,4 @@ environments:
     needs:
       - vpc
 settings:
-    environmentRemovalStrategy: destory
+    environmentRemovalStrategy: destroy
