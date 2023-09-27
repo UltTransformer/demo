@@ -10,6 +10,6 @@ environments:
   ec2-2:
     name: EC2-2
     templateName: 'aws/ec2/cloudformation/simple'
-    needs:
+    # needs:
     # settings:
 	   #  environmentRemovalStrategy: detatch
