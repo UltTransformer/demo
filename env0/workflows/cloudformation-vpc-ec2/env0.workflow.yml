@@ -11,6 +11,6 @@ environments:
     name: EC2-2
     templateName: 'aws/ec2/cloudformation/simple'
     needs:
-      - vpc
+      - ec2-1
 
 # Comment - Demo 9/27 16:43
