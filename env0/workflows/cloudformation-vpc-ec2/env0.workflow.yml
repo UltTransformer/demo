@@ -5,12 +5,12 @@ environments:
   ec2-1:
     name: EC2-1
     templateName: 'aws/ec2/cloudformation/simple'
-    disabled: true
     needs:
       - vpc
   ec2-2:
     name: EC2-2
     templateName: 'aws/ec2/cloudformation/simple'
+    disabled: true
     needs:
       - ec2-1
 
