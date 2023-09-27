@@ -2,8 +2,13 @@ environments:
   vpc:
     name: 'VPC'
     templateName: 'aws/vpc/cloudformation/simple'
-  ec2:
-    name: EC2
+  ec2-1:
+    name: EC2-1
+    templateName: 'aws/ec2/cloudformation/simple'
+    needs:
+      - vpc
+  ec2-2:
+    name: EC2-2
     templateName: 'aws/ec2/cloudformation/simple'
     needs:
       - vpc
