@@ -1,8 +1,0 @@
-version: 2
-deploy:
-  steps:
-    terraformInit:
-      after: 
-        - name: VPN installation
-          run: |
-            echo "Installing OpenVPN"
