@@ -1,0 +1,13 @@
+version: 2
+deploy:
+  steps:
+    terraformPlan:
+      after:
+        - name: Generate plan output
+          run: terraform show -json .tf-plan > tf-plan.json
+        - name: Running OPA check
+          use: https://github.com/env0/env0-opa-plugin
+          inputs:
+            path: ${ENV0_ROOT_DIR}/env0/custom-flows/opa/rego
+            flags: --input tf-plan.json --fail-defined --format=raw
+            query: data.terraform.validation.violations[msg]
