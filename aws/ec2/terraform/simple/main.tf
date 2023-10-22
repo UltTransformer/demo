@@ -19,7 +19,7 @@ data "aws_ami" "amazon_linux" {
   most_recent = true
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-2.0.20211001.1-x86_64-gp2"]
+    values = ["al2023-ami-2023.2.20231016.0-kernel-6.1-x86_64"]
   }
   filter {
     name   = "virtualization-type"
