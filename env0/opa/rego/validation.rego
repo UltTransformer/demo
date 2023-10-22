@@ -13,7 +13,7 @@ no_open_cidr_blocks[msg] {
   cidr_blocks := lib.resources[r].values.ingress[x].cidr_blocks
   lib.resources[r].values.ingress[x].to_port = 22
   lib.list_contains_value(cidr_blocks, open_cidr)
-  msg = sprintf("No security groups for inbound on port 22 should be open from all addresses. Resource in violation: %v",[r.address])
+  msg = sprintf("0.0.0.0/0 cannot be used within SG's!. Resource in violation: %v",[r.address])
 }
 
 allow {
