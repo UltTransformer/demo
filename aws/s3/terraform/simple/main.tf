@@ -9,7 +9,7 @@ terraform {
   backend "remote" {  
     organization = "ChrisNoonPlayground"
     workspaces {
-      name = "demo"
+      name = "ws-DuTkX1531BH6NhHv"
     }
   }
 }
