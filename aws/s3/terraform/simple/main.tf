@@ -1,5 +1,3 @@
-# Customer change Aug-21 15:40
-
 # Provider
 
 terraform {
@@ -25,4 +23,13 @@ resource "aws_s3_bucket_versioning" "s3_bucket" {
   versioning_configuration {
     status = "Enabled"
   }
+}
+
+# Backend
+
+backend "remote" {  
+  organization = "ChrisNoonPlayground"
+  workspaces {
+    name = "demo"
+	}
 }
