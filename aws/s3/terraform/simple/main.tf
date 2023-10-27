@@ -8,10 +8,17 @@ terraform {
       source = "hashicorp/aws"
     }
   }
-  backend "remote" {  
-    organization = "ChrisNoonPlayground"
+#  backend "remote" {  
+#    organization = "ChrisNoonPlayground"
+#    workspaces {
+#      name = "demo"
+#    }
+#  }
+  backend "remote" {
+    hostname = "backend.api.env0.com"
+    organization = "a25b6a59-9c48-4917-b082-68e985319a87.63152313-6e36-4913-bd20-5f3bfb3ce6e2"
     workspaces {
-      name = "demo"
+      name = "ws-bGzUbaunAV3ciBtk"
     }
   }
 }
