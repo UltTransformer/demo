@@ -21,7 +21,7 @@ terraform {
 #      name = "ws-bGzUbaunAV3ciBtk"
 #    }
 #  }
-#}
+}
 
 provider "aws" {
   region = "eu-north-1"
