@@ -132,27 +132,3 @@ resource "aws_nat_gateway" "nat_gw_1" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc_1.id
 }
-
-# IAM Role
-
-resource "aws_iam_role" "example_role" {
-  name = "workspaces_DefaultRole"
-  assume_role_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": "sts:AssumeRole",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "workspaces.amazonaws.com"
-      }
-    }
-  ]
-}
-EOF
-}
-
-output "role_arn" {
-  value = aws_iam_role.example_role.arn
-}
