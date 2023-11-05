@@ -46,6 +46,6 @@ variable "sub_region_3" {
   type    = string
   default = "eu-north-1c"
 }
-variable "" {
+variable "simple_ad_pwd" {
   type    = string
 }
