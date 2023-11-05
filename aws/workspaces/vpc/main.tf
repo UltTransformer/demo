@@ -162,7 +162,7 @@ resource "aws_directory_service_directory" "simple_ad" {
     vpc_id     = aws_vpc.vpc_1.id 
     subnet_ids = [aws_subnet.subnet_public_1.id, aws_subnet.subnet_public_2.id, aws_subnet.subnet_public_3.id]  
 
-  security_group_ids = [aws_security_group.allow_all_egress.id]
+  security_group_ids = aws_security_group.allow_all_egress.id
 }
 
 resource "aws_directory_service_directory_password_policy" "password_policy" {
