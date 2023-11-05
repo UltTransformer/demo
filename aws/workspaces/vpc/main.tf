@@ -16,10 +16,6 @@ provider "aws" {
 resource "aws_vpc" "vpc_1" {
   cidr_block           = var.vpc_1_cidr_1
   enable_dns_hostnames = true
-  tags = {
-    Name = "vpc_1"
-    env0 = var.state_string
-  }
 }
 
 # Subnet(s)
