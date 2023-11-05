@@ -139,7 +139,7 @@ resource "aws_security_group" "allow_all_egress" {
   name        = "allow-all-egress"
   description = "Allow all outbound traffic"
 
-  vpc_id = "vpc-12345678"  # Replace with your VPC ID
+  vpc_id = aws_vpc.vpc_1.id
 
   egress {
     from_port   = 0
