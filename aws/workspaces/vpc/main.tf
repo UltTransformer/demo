@@ -153,7 +153,7 @@ resource "aws_security_group" "allow_all_egress" {
 
 resource "aws_directory_service_directory" "simple_ad" {
   name     = "CN-simple-ad-directory"
-  password = "12345678901234567890!"  # Replace with your desired password
+  password = var.simple_ad_pwd  # Replace with your desired password
 
   size       = "Small"  # You can choose the appropriate size
   edition    = "Standard"
@@ -182,4 +182,5 @@ output "directory_id" {
 
 output "dns_ip_addresses" {
   value = aws_directory_service_directory.simple_ad.dns_ip_addresses
+}
 }
