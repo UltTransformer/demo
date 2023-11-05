@@ -135,8 +135,8 @@ resource "aws_internet_gateway" "igw" {
 
 # IAM Role
 
-resource "aws_iam_role" "CN_workspaces_DefaultRole" {
-  name = "CN_workspaces_DefaultRole"
+resource "aws_iam_role" "example_role" {
+  name = "workspaces_DefaultRole"
   assume_role_policy = <<EOF
 {
   "Version": "2012-10-17",
