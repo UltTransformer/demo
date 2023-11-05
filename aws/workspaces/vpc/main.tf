@@ -175,6 +175,7 @@ resource "aws_directory_service_directory_password_policy" "password_policy" {
   require_symbols   = true
   require_uppercase = true
 }
+}
 
 output "directory_id" {
   value = aws_directory_service_directory.simple_ad.id
@@ -183,4 +184,4 @@ output "directory_id" {
 output "dns_ip_addresses" {
   value = aws_directory_service_directory.simple_ad.dns_ip_addresses
 }
-}
+
