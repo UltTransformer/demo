@@ -132,3 +132,54 @@ resource "aws_nat_gateway" "nat_gw_1" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = aws_vpc.vpc_1.id
 }
+
+# Security Groups
+
+resource "aws_security_group" "allow_all_egress" {
+  name        = "allow-all-egress"
+  description = "Allow all outbound traffic"
+
+  vpc_id = "vpc-12345678"  # Replace with your VPC ID
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"  # All protocols
+    cidr_blocks = ["0.0.0.0/0"]  # Allow traffic to all destinations (any IP)
+  }
+}
+
+# Simple AD
+
+resource "aws_directory_service_directory" "simple_ad" {
+  name     = "CN-simple-ad-directory"
+  password = "12345678901234567890!"  # Replace with your desired password
+
+  size       = "Small"  # You can choose the appropriate size
+  edition    = "Standard"
+  type       = "SimpleAD"
+  vpc_settings {
+    vpc_id     = aws_vpc.vpc_1.id 
+    subnet_ids = [aws_subnet.subnet_public_1.id, aws_subnet.subnet_public_2.id, aws_subnet.subnet_public_3.id]  
+
+  security_group_ids = [aws_security_group.allow_all_egress.id]
+}
+
+resource "aws_directory_service_directory_password_policy" "password_policy" {
+  directory_id = aws_directory_service_directory.simple_ad.id
+
+  # You can customize password policy settings here
+  minimum_length    = 8
+  require_lowercase = true
+  require_numbers   = true
+  require_symbols   = true
+  require_uppercase = true
+}
+
+output "directory_id" {
+  value = aws_directory_service_directory.simple_ad.id
+}
+
+output "dns_ip_addresses" {
+  value = aws_directory_service_directory.simple_ad.dns_ip_addresses
+}
