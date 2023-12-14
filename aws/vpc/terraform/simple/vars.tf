@@ -48,4 +48,5 @@ variable "sub_region_3" {
 }
 variable "state_string" {
   type    = string
+  default = "c28h9v9824hc2e089bc02egfb2ed79e2bu"
 }
